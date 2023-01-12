@@ -26,6 +26,6 @@ const findLargestSum = (arr, noOfElements) => {
   return maxSum;
 };
 
-let result = findLargestSum([5, 7, 1, 4, 3, 6, 2, 9, 2], 2);
+let result = findLargestSum([5, 7, 1, 4, 3, 6, 2, 9, 2], 1);
 
 console.log(result);
