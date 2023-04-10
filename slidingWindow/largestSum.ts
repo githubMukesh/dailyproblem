@@ -5,10 +5,32 @@
  left = 0;
  right = key;
  Iterate the elment
+ */
+/*
+  [ 5, 7, 1, 4, 3, 6, 2, 9, 2 ]
 
+  const findLargestSum = (arr, noOfElements) => {
+    let windowEnd = 0;
+    let windowSum = 0;
+    let windowStart = 0;
+    let maxSum  = -1
+
+    for(let windowEnd = 0;  windowEnd < arr.length; windowEnd++){
+      windowSum += arr[windowEnd];
+
+      if(windowEnd - windowStart + 1 ===  noOfElements){
+       maxSum = Math.max(maxSum, windowSum);
+       windowSum -= arr[windowStart];
+       windowStart+=1;
+      }
+
+    }
+  };
 
 
 */
+
+
 
 const findLargestSum = (arr, noOfElements) => {
   let maxSum = -1;
@@ -26,6 +48,6 @@ const findLargestSum = (arr, noOfElements) => {
   return maxSum;
 };
 
-let result = findLargestSum([5, 7, 1, 4, 3, 6, 2, 9, 2], 1);
+let result = findLargestSum([5, 7, 1, 4, 3, 6, 2, 9, 2], 3);
 
 console.log(result);
